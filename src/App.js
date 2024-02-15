@@ -1,5 +1,8 @@
 import { Component } from 'react';
 import Productos from './components/Productos';
+import Layout from './components/Layout';
+import Title from './components/Title.js';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   state = {
@@ -12,10 +15,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Productos
-          agregarAlCarro={() => {console.log('NO hace nada')}}
-          productos={this.state.productos}
-        />
+        <Navbar/>
+        <Layout>
+          <Title/>
+          <Productos
+            agregarAlCarro={() => {console.log('NO hace nada')}}
+            productos={this.state.productos}
+          />
+        </Layout>
+        
       </div>
     )
   }
