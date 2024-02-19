@@ -12,7 +12,7 @@ const styles = {
     },
     img: {
         width: '100%',
-        height: '400px',
+        height: '200px',
         objectFit: 'cover'
     }
 }

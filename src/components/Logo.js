@@ -4,7 +4,6 @@ const styles = {
     logo: {
         fontWeight: '700',
         fontSize: '2rem',
-        color: '#fff',
         margin: '20px'
     }
 }

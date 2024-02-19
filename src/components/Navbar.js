@@ -1,11 +1,13 @@
 import { Component } from "react";
 import Logo from './Logo';
+import Carro from './Carro';
 
 const styles = {
     navbar: {
         display: 'flex',
+        flexDirection: 'row',
         justifyContent: 'space-between',
-        alingItems: 'center',
+        alignItems: 'center',
         height: '100px',
         position: 'relative',
         padding: '0 50px',
@@ -16,9 +18,15 @@ const styles = {
 
 class Navbar extends Component{
     render(){
+        const {carro, esCarroVisible, mostrarCarro} = this.props;
         return(
             <nav style={styles.navbar}>
                 <Logo/>
+                <Carro 
+                    carro={carro}
+                    esCarroVisible={esCarroVisible}
+                    mostrarCarro={mostrarCarro}
+                />
             </nav>
         )
     }
